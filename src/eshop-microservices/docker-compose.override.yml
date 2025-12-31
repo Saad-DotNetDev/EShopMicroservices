@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  catalogdb:
+    container_name: catalogdb
+    restart: always
+    environment:
+      POSTGRES_DB: catalogdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres 
+    ports:
+      - "5432:5432"
+    volumes:
+     - postgres_catalog:/var/lib/postgresql
+
+ 
