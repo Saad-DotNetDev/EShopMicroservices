@@ -4,3 +4,6 @@ global using Mapster;
 global using BuildingBlockks.CQRS;
 global using CatalogAPI.Models;
 global using Marten;
+global using FluentValidation;
+global using BuildingBlockks.Behaviors;
+global using BuildingBlockks.Exceptions.Handler;
