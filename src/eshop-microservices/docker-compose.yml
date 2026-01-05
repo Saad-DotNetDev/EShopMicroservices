@@ -4,6 +4,16 @@ services:
   catalogdb:
     image: postgres
 
+  basketdb:
+    image: postgres
+
+
+  catalogapi:
+    image: ${DOCKER_REGISTRY-}catalogapi
+    build:
+      context: .
+      dockerfile: CatalogAPI/Dockerfile
 
 volumes:
   postgres_catalog:
+  postgres_basket:
