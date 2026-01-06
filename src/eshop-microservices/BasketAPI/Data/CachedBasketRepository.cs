@@ -20,7 +20,6 @@ namespace BasketAPI.Data
             if (!string.IsNullOrEmpty(cachedBasket))
                return JsonSerializer.Deserialize<ShoppingCart>(cachedBasket);
 
-
             var basket = await repo.GetBasket(userName, cancellationToken);
             await cache.SetStringAsync(userName, JsonSerializer.Serialize(basket), cancellationToken);
             return basket;
